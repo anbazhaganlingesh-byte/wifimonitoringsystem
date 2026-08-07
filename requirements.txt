@@ -1,0 +1,13 @@
+Flask==3.0.3
+Flask-SQLAlchemy==3.1.1
+Flask-Login==0.6.3
+Flask-WTF==1.2.1
+python-dotenv==1.0.1
+Werkzeug==3.0.3
+
+# Optional: enables the faster active ARP sweep in real_monitor.py.
+# Needs Npcap (https://npcap.com) installed on Windows, and the app run
+# from an elevated terminal, to actually send packets. If missing or
+# unprivileged, real_monitor.py automatically falls back to a ping-sweep
+# + `arp -a` scan that needs no extra setup.
+scapy==2.7.0

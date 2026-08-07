@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Sign In · GuardSpot{% endblock %}
+{% block content %}
+<div class="login-wrap">
+  <div class="login-card">
+    <div class="login-brand">
+      <span class="brand-dot"></span>
+      <h1>GuardSpot</h1>
+    </div>
+    <p class="login-sub">Hotspot Access Manager — admin sign in</p>
+
+    <form method="POST" novalidate>
+      {{ form.hidden_tag() }}
+      <label for="username">Username</label>
+      {{ form.username(id="username", autocomplete="username", autofocus=true) }}
+
+      <label for="password">Password</label>
+      {{ form.password(id="password", autocomplete="current-password") }}
+
+      {{ form.submit(class="btn-primary") }}
+    </form>
+  </div>
+</div>
+{% endblock %}
